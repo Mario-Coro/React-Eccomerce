@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #533483;
+    padding-top: 8px;
+    padding-bottom: 8px;
+ 
+}
+
+.logo{
+    width: 120px;
+    height: auto;
+    border-radius: 25px;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+}
+
+.cart-icon{
+    width: 35px;
+    height: auto;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+ul li{
+    padding-left: 25px;
+    font-size: 23px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+ul li a:hover{
+    color: white;
+}
