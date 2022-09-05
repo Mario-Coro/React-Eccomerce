@@ -1,7 +1,7 @@
 import React from "react";
 import logo from '../../images/logo.jpg';
 import cart from '../../images/shopping-cart.png'
-import './header.css'
+import './navbar.css'
 
 const Header = ()=>{
 return(
