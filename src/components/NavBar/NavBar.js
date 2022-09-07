@@ -1,9 +1,9 @@
 import React from "react";
 import logo from '../../images/logo.jpg';
-import cart from '../../images/shopping-cart.png'
 import './navbar.css'
+import CartWidget from '../Cart/CartWidget'
 
-const Header = ()=>{
+const NavBar = ()=>{
 return(
  <header>
     <img class="logo" src={logo} alt="logo" />
@@ -21,8 +21,8 @@ return(
             </li>
         </ul>
     </nav>
-    <img class="cart-icon" src={cart} alt="cart" />
+<CartWidget/>
  </header>
 )
 }
- export default Header
+ export default NavBar
