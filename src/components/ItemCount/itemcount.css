@@ -1,0 +1,12 @@
+.y{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 60px;
+    height: auto;
+    margin: 25px;
+    background-color: brown;
+}

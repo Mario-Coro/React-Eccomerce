@@ -6,7 +6,7 @@ import CartWidget from '../Cart/CartWidget'
 const NavBar = ()=>{
 return(
  <header>
-    <img class="logo" src={logo} alt="logo" />
+    <img className="logo" src={logo} alt="logo" />
     <h1>Hoopstore</h1>
     <nav>
         <ul>
@@ -25,4 +25,4 @@ return(
  </header>
 )
 }
- export default NavBar
+ export default NavBar;

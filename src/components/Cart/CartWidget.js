@@ -5,7 +5,7 @@ import '../NavBar/navbar.css'
 const CartWidget =()=>{
 return(
     <>
-    <img class="cart-icon" src={cart} alt="cart-icon" />
+    <img className="cart-icon" src={cart} alt="cart-icon" />
     </>
 )
 }
