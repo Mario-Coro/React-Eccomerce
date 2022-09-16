@@ -1,0 +1,21 @@
+.card{
+    padding-top: 10px;
+    display: inline-block;
+    padding-left: 155px;
+}
+img{
+    width: 200px;
+    height: auto;
+}
+
+.card h3{
+    font-size: 22px;
+    text-align: center;
+    
+}
+
+.card h4{
+    font-size: 18px;
+    text-align: center;
+}
+
