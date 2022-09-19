@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import cart from '../../images/shopping-cart.png'
 import '../NavBar/navbar.css'
 

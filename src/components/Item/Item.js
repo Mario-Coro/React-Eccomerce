@@ -1,5 +1,5 @@
-import React from "react";
-import './item.css';
+import React from "react"
+import './item.css'
 import {Button} from '@chakra-ui/react'
 
 const Item =({product})=>{
@@ -10,7 +10,7 @@ const Item =({product})=>{
         <h4>{product.price}</h4>
         <Button>Ver Detalles</Button>
         </div>
-    );
+    )
 }
 
-export default Item;
+export default Item
