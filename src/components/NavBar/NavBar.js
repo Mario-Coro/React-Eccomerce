@@ -1,7 +1,7 @@
-import React from "react"
-import logo from "../../images/logo.jpg"
-import "./navbar.css"
-import CartWidget from "../Cart/CartWidget"
+import React from "react";
+import logo from "../../images/logo.jpg";
+import "./navbar.css";
+import CartWidget from "../Cart/CartWidget";
 
 const NavBar = () => {
   return (
@@ -21,8 +21,8 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-      <CartWidget/>
+      <CartWidget />
     </header>
-  )
-}
-export default NavBar
+  );
+};
+export default NavBar;
