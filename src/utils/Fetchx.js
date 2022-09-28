@@ -1,9 +1,11 @@
-export const Fetch = (products, detaiId) => {
+export const Fetchx = (products, categoryId) => {
   return new Promise((res, rej) => {
     setTimeout(() => {
       try {
-        if (detaiId) {
-          const fit = products.find((product) => product.id === detaiId);
+        if (categoryId) {
+          const fit = products.filter(
+            (product) => product.category === categoryId
+          );
           res(fit);
         } else {
           res(products);

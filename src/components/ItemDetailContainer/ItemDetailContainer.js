@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { Fetch } from "../../utils/Fetch";
+import Products from "../../assets/products";
+import { Spinner } from "@chakra-ui/react";
+import { useParams } from "react-router-dom";
 import "./itemdetailcontainer.css";
 
 const ItemDetailContainer = () => {
+  let { productId } = useParams();
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch("../../../assets/products.json")
-        .then((response) => response.json())
-        .then((data) => setProduct(data[1]), setLoading(false));
-    }, 2000);
-  }, []);
+    Fetch(Products, parseInt(productId)).then(
+      (res) => setProduct(res),
+      setLoading(false)
+    );
+  }, [productId]);
 
   return (
     <div className="item-detail-container">
-      <ItemDetail product={product} />
+      {loading? <Spinner/> :<ItemDetail product={product} />}
     </div>
   );
 };
