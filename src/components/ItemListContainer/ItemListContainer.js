@@ -1,6 +1,5 @@
 import "./itemlistcontainer.css";
 import ItemList from "../ItemList/ItemList";
-import ItemCount from "../ItemCount/ItemCount";
 import React, { useEffect, useState } from "react";
 import { Fetchx } from "../../utils/Fetchx";
 import Products from "../../assets/products";
@@ -20,11 +19,6 @@ const ItemListContainer = () => {
     );
   }, [categoryId]);
 
-  let stock = 7;
-
-  const add = () => {
-    stock !== 0 && console.log("Agregaste el producto");
-  };
 
   return (
     <main className="products-container">

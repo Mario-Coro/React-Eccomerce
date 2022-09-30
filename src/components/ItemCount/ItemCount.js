@@ -4,6 +4,7 @@ import "./itemcount.css"
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [contador, setContador] = useState(initial)
+
   const sumar = () => {
     contador < stock && setContador(contador + 1)
   }
@@ -12,16 +13,21 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     contador > initial && setContador(contador - 1)
   }
 
+  const ff =()=>{
+    const counter = contador
+    onAdd(counter)
+  }
+
   return (
     <div className="counter">
-      <Button className="button" onClick={sumar}>
+      <Button className="button" size= 'xs' onClick={sumar}>
         +
       </Button>
-      <h2 className="number">{contador}</h2>
-      <Button className="button" onClick={restar}>
+      <h4 className="number">{contador}</h4>
+      <Button className="button" size= 'xs' onClick={restar}>
         -
       </Button>
-      <Button onClick={onAdd}>Agregar al Carrito</Button>
+      <Button size='sm' onClick={ff}>Agregar al Carrito</Button>
     </div>
   )
 }
