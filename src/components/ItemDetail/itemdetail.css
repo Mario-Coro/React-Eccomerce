@@ -7,9 +7,10 @@
 }
 
 .product-info img{
-    width: 350px;
-    height: auto;
+    width: auto;
+    height: 200px;
     border-radius: 30px;
+    align-items: center;
 }
 
 .product-details{

@@ -1,7 +1,8 @@
-import React from "react"
+import React, {useContext, useState} from "react"
+import { Context } from "../Context/CartContext"
 
-const cart =()=>{
-    return("cart")
+const Cart =()=>{
+    return('');
 }
 
-export default cart
+export default Cart

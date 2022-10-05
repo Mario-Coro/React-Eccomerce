@@ -1,18 +1,37 @@
-import React from "react";
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions} from '@mui/material';
 import "./item.css";
-import { Button } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 const Item = ({ product }) => {
   return (
-    <div className="card">
-      <img src={product.img} alt="" />
-      <h3>{product.name}</h3>
-      <h4>{product.price}</h4>
+    <Card sx={{ maxWidth: 250}}>
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="220"
+        image={product.img}
+        alt="green iguana"
+      />
+      <CardContent sx={{backgroundColor:'lightgray', marginTop:2}}>
+        <Typography gutterBottom sx={{textAlign:"center"}} variant="h5" component="div">
+          Curry 9 '2974'
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+    <CardActions sx={{backgroundColor:'lightgray'}} >
       <Link to={`/Item/${product.id}`}>
-        <Button>Ver Detalles</Button>
+      <Button sx={{backgroundColor:'blue', color:'white'}} size="medium" color="primary">
+        Share
+      </Button>
       </Link>
-    </div>
+    </CardActions>
+  </Card>
   );
 };
 

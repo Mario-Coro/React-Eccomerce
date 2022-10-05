@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import {Button} from '@chakra-ui/react'
+import { Button } from '@mui/material';
 import "./itemcount.css"
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -14,8 +14,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   }
 
   const ff =()=>{
-    const counter = contador
-    onAdd(counter)
+    onAdd(contador)
   }
 
   return (
