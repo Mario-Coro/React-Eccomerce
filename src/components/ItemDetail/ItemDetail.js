@@ -8,7 +8,7 @@ import { Context } from "../Context/CartContext";
 const ItemDetail = ({ product }) => {
   const [quantity, setQuantity] = useState(0);
   const [click, setClick] = useState(false);
-  const { cart, addOnCart, isInCart } = useContext(Context);
+  const { cart, addOnCart} = useContext(Context);
   
   const onAdd = (contador) => {
     setClick(true);
@@ -16,8 +16,8 @@ const ItemDetail = ({ product }) => {
     addOnCart(product, contador)
   };
 
-  console.log(quantity);
   let stock = product.stock;
+
 
   console.log(cart);
   return (

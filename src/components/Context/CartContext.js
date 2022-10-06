@@ -4,16 +4,18 @@ export const Context = createContext();
 
 const CustomProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const category = "shoes"
+
 
   const addOnCart =(product, quantity)=>{
-    if (isInCart(product.id)){
-      console.log('true');
-    }
+   if(isInCart(product.id)){
+    console.log('true');
+   }
     else{
-      setCart([...cart, {product, cantidad:quantity}])
+      setCart([...cart, {product, cantidad: quantity}])
       console.log(isInCart(product.id));
+      console.log(product.id);
     }
-    
   }
   
 
@@ -24,14 +26,14 @@ const CustomProvider = ({ children }) => {
     setCart(filter)
   }
 
-  const isInCart = (id)=> cart.some((product) => product.id === id)
-  
-
   const reset =()=>{
     setCart([])
   }
+  
+  const isInCart = (id) => cart.some((prod) => prod.id === id)
+  
 
-  return <Context.Provider value={{ cart, addOnCart, isInCart }}>{children}</Context.Provider>;
+  return <Context.Provider value={{ cart, addOnCart}}>{children}</Context.Provider>;
 };
 
 export default CustomProvider;
