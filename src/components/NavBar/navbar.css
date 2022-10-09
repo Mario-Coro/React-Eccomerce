@@ -48,3 +48,8 @@ ul li a {
 ul li a:hover {
   color: white;
 }
+
+.number{
+  color: black;
+  font-weight: 800;
+}

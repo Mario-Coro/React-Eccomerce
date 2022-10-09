@@ -5,7 +5,7 @@ const Products = [
     img: "https://image.goat.com/transform/v1/attachments/product_template_pictures/images/074/595/875/original/3026437_400.png?action=crop&width=2000",
     category: "shoes",
     stock: 15,
-    price: "$400",
+    price: 400,
     description:
       "Kyrie irving shoes with a especial collaboration of famous kid's series Spongebob",
   },
@@ -16,7 +16,7 @@ const Products = [
     img: "https://image.goat.com/transform/v1/attachments/product_template_additional_pictures/images/078/855/952/original/996861_01.jpg.jpeg?action=crop&width=2000",
     category: "jerseys",
     stock: 20,
-    price: "$150",
+    price: 150,
     description: "Official Golden state Warriors 2021-22 local jersey",
   },
 
@@ -26,11 +26,11 @@ const Products = [
     img: "https://image.goat.com/transform/v1/attachments/product_template_pictures/images/028/185/523/original/3021258_001.png?action=crop&width=2000",
     category: "accsesories",
     stock: 7,
-    price: "$80",
+    price: 80,
     description: "Official NBA game ball",
   },
 
-  {
+/*   {
     id: 4,
     name: "Curry 9 2974",
     img: "https://image.goat.com/transform/v1/attachments/product_template_additional_pictures/images/071/658/140/original/773881_01.jpg.jpeg?action=crop&width=2000",
@@ -90,7 +90,7 @@ const Products = [
     price: "$150",
     description:
       "Suns special retro valley jersey with DBook name and number",
-  },
+  }, */
 
 
 ];

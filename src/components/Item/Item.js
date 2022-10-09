@@ -20,7 +20,7 @@ const Item = ({ product }) => {
       />
       <CardContent sx={{backgroundColor:'lightgray', marginTop:2}}>
         <Typography gutterBottom sx={{textAlign:"center"}} variant="h5" component="div">
-          Curry 9 '2974'
+          {product.name}
         </Typography>
       </CardContent>
     </CardActionArea>

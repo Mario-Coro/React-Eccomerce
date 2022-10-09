@@ -1,15 +1,32 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../Context/CartContext";
+import Item from "../Item/Item";
+import './cart.css'
 
 const Cart = () => {
-  const { cart } = useContext(Context);
-  return (
+  const { cart, deleteItem, reset, total } = useContext(Context);
+  return(
     <>
-      {cart.map((prod) => {
-        return <h2 key={prod.id+1}>{prod.name}</h2>;
-      })}
+    {
+      cart.length === 0?( <h1>no hay productos</h1> ): 
+      <> {cart.map((item) => (
+        <div className="item" key={item.product.id}>
+          <img src={item.product.img} alt="" />
+          <h3>{item.product.name}</h3>
+          <h4>Cantidad: {item.quantity}</h4>
+          <button onClick={()=>{deleteItem(item.product.id)}}>
+            Eliminar del Carrito
+          </button>
+        </div>
+      ))}
+      <button onClick={reset}>Vaciar Carrito</button>
+      <h3>Total:${total}</h3>
     </>
-  );
-};
+    }
+    
+    
+    
+    </>)
+}
 
 export default Cart;
