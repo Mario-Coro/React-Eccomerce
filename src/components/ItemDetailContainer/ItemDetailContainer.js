@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { Fetch } from "../../utils/Fetch";
-import Products from "../../assets/products";
 import { Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import "./itemdetailcontainer.css";
+import { db } from '../../firebase/firebase';
+import { doc , getDoc, collection } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   let { productId } = useParams();
@@ -12,10 +12,19 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Fetch(Products, parseInt(productId)).then(
-      (res) => setProduct(res),
+    const productCollection = collection( db, 'products')
+    const ref = doc(productCollection , productId)
+    getDoc(ref)
+    .then((product)=>{
+      setProduct(
+        {
+          id: product.id,
+          ...product.data()
+        }
+      )
       setLoading(false)
-    );
+    })
+
   }, [productId]);
 
   return (

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../Context/CartContext";
 import Item from "../Item/Item";
 import './cart.css'
@@ -8,7 +9,7 @@ const Cart = () => {
   return(
     <>
     {
-      cart.length === 0?( <h1>no hay productos</h1> ): 
+      cart.length === 0?( <h1>no hay productos. Ve al <Link to='/'>Home</Link> y añade productos</h1> ): 
       <> {cart.map((item) => (
         <div className="item" key={item.product.id}>
           <img src={item.product.img} alt="" />
