@@ -1,21 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-
-h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    padding-top: 10px;
-}
-
-.products-container{
-    display: grid;
-    grid-template-columns:350px 350px 350px;
-    grid-template-rows: 350px 350px 350px;
-    justify-content: center;
-    align-items: center;
-    padding-left: 75px;
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 30px 15px;
+  row-gap: 30px;
+  justify-content: center;
+  align-items: center;
 }

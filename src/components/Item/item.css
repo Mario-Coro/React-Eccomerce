@@ -1,18 +1,53 @@
-img {
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+.link {
+  text-decoration: none;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   width: 200px;
+  height: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.card-img {
+  margin: 0 auto;
+  max-width: 180px;
   height: auto;
+  padding-top: 10px;
 }
 
-.card h3 {
-  font-size: 22px;
+.info {
+  padding-top: 20px;
+}
+.info h2 {
+  font-size: 20px;
   text-align: center;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  color: black;
 }
 
-.card h4 {
+.info h3 {
   font-size: 18px;
   text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
-.Button{
-  background-color: red;
+.card-button {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  margin: 0 auto;
+  width: auto;
+  height: 35px;
+  border-radius: 10px;
+  border: 1.5px solid black;
+  background-color: #6843a1;
+  color: white;
 }

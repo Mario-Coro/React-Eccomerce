@@ -1,28 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../images/logo.jpg";
 import "./navbar.css";
 import CartWidget from "../Cart/CartWidget";
 import Nav from "../Nav/Nav";
 import { Link } from "react-router-dom";
+import { db } from "../../firebase/firebase";
+import { getDocs, collection } from "firebase/firestore";
 
 const NavBar = () => {
-  const categories = [
-    {
-      id: 20,
-      name: "Shoes",
-      route: "/categories/shoes",
-    },
-    {
-      id: 21,
-      name: "Jerseys",
-      route: "/categories/jerseys",
-    },
-    {
-      id: 22,
-      name: "Accsesories",
-      route: "/categories/accsesories",
-    },
-  ];
+  const [categories, setCategories] = useState([]);
+  const productsCategories = collection(db, "categories");
+  useEffect(() => {
+    getDocs(productsCategories).then((data) => {
+      const categoriesList = data.docs.map((category) => {
+        return {
+          ...category.data(),
+          id: category.id,
+        };
+      });
+      setCategories(categoriesList);
+    });
+  }, []);
 
   return (
     <header>

@@ -4,7 +4,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #533483;
+  background-color: #44296d;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -18,38 +18,20 @@ header {
 .title {
   font-family: "Lobster", cursive;
   font-size: 50px;
-  color: black;
+  color: white;
 }
 
 .cart-icon {
+  vertical-align: top;
+}
+.icon {
   width: 35px;
   height: auto;
   padding-bottom: 5px;
   padding-right: 5px;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-}
-
-ul li {
-  padding-left: 25px;
-  font-size: 23px;
-  font-family: "Open Sans", sans-serif;
-}
-
-ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-ul li a:hover {
-  color: white;
-}
-
-.number{
+.number {
   color: black;
   font-weight: 800;
 }

@@ -1,7 +1,7 @@
 import "./itemlistcontainer.css";
 import ItemList from "../ItemList/ItemList";
 import React, { useEffect, useState } from "react";
-import { Spinner } from "@chakra-ui/react";
+import Spinner from "../../assets/Spinner";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebase/firebase";
 import { getDocs, collection, query, where } from "firebase/firestore";
@@ -9,7 +9,7 @@ import { getDocs, collection, query, where } from "firebase/firestore";
 const ItemListContainer = () => {
   let { categoryId } = useParams();
   const [productList, setProductList] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const productsCollection = collection(db, "products");
 
   const getData = (prodList) => {
@@ -21,7 +21,7 @@ const ItemListContainer = () => {
         };
       });
       setProductList(list);
-      setLoading(false);
+      setLoading(true);
     });
   };
 
@@ -32,9 +32,16 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <main className="products-container">
-      {loading ? <Spinner /> : <ItemList productList={productList} />}
-    </main>
+    <>
+      {loading ? (
+        <main className="products-container">
+          {" "}
+          <ItemList productList={productList} />{" "}
+        </main>
+      ) : (
+        <Spinner />
+      )}
+    </>
   );
 };
 

@@ -1,34 +1,35 @@
-import React, { useState } from "react"
-import { Button } from '@mui/material';
-import "./itemcount.css"
+import React, { useState } from "react";
+import "./itemcount.css";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-  const [contador, setContador] = useState(initial)
+  const [counter, setCounter] = useState(initial);
 
-  const sumar = () => {
-    contador < stock && setContador(contador + 1)
-  }
+  const add = () => {
+    counter < stock && setCounter(counter + 1);
+  };
 
-  const restar = () => {
-    contador > initial && setContador(contador - 1)
-  }
+  const subtract = () => {
+    counter > initial && setCounter(counter - 1);
+  };
 
-  const ff =()=>{
-    onAdd(contador)
-  }
+  const addToCart = () => {
+    onAdd(counter);
+  };
 
   return (
     <div className="counter">
-      <Button className="button" size= 'xs' onClick={sumar}>
+      <button onClick={add} className="button">
         +
-      </Button>
-      <h4 className="number">{contador}</h4>
-      <Button className="button" size= 'xs' onClick={restar}>
+      </button>
+      <h4 className="number">{counter}</h4>
+      <button onClick={subtract} className="button">
         -
-      </Button>
-      <Button size='sm' onClick={ff}>Agregar al Carrito</Button>
+      </button>
+      <button onClick={addToCart} className="add">
+        Add To Cart
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default ItemCount
+export default ItemCount;

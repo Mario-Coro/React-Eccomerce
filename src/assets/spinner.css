@@ -1,0 +1,21 @@
+.spinner {
+  animation: spin infinite 5s linear;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(2200deg);
+  }
+}
+
+.spinner-img {
+  width: 60px;
+  height: auto;
+}
