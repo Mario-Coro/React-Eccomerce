@@ -1,13 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+@font-face {
+  font-family: 'under';
+  src: url(../../../public/Montalban.otf);
+}
+
+.header {
+  height: 150px;
   background-color: #44296d;
   padding-top: 8px;
   padding-bottom: 8px;
+  width: 100%;
 }
+
+.brand{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 60px;
+}
+
 
 .logo {
   width: 120px;
@@ -22,7 +34,8 @@ header {
 }
 
 .cart-icon {
-  vertical-align: top;
+  display: flex;
+  justify-content: end;
 }
 .icon {
   width: 35px;
@@ -34,4 +47,60 @@ header {
 .number {
   color: black;
   font-weight: 800;
+}
+
+.sidebar a{
+  font-size: 20px;
+  font-family: 'under';
+  color: black;
+  margin-top: 30px;
+}
+
+.sidebar{
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-top{
+  background-color: #44296d;
+  height: 80px;
+}
+
+.sidebar-title{
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+
+@media screen and (max-width: 480px) {
+.header{
+  height: 120px;
+}
+
+  .brand{
+    gap: 20px;
+  }
+  .logo{
+    width: 80px;
+  }
+
+  .title{
+    font-size: 35px;
+  }
+
+  .icon{
+    width: 25px;
+  }
+
+
+}
+
+@media screen and (min-width:480px) and (max-width:760px){
+  .logo{
+    width: 100px;
+  }
+
+  .title{
+    font-size: 40px;
+  }
 }

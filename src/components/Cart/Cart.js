@@ -56,7 +56,7 @@ const Cart = () => {
       ) : (
         <>
           <h2 className="cart-title">My Cart</h2>
-          <Table className="table" striped bordered hover>
+          <table className="table" striped bordered hover>
             <thead>
               <tr>
                 <th>Product</th>
@@ -89,7 +89,7 @@ const Cart = () => {
                 </tr>
               ))}
             </tbody>
-          </Table>
+          </table>
           <div className="container">
             <div className="cardt">
               <h1 className="cardt_title">Buyer Information</h1>

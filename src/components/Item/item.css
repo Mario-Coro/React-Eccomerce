@@ -12,9 +12,15 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding-bottom: 20px;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover{
+transform: scale(1.1);
 }
 
 .card-img {
+  display: block;
   margin: 0 auto;
   max-width: 180px;
   height: auto;
@@ -39,15 +45,18 @@
   color: black;
 }
 
-.card-button {
-  display: block;
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-  margin: 0 auto;
-  width: auto;
-  height: 35px;
-  border-radius: 10px;
-  border: 1.5px solid black;
-  background-color: #6843a1;
-  color: white;
+@media screen and (max-width: 480px) {
+.card{
+  width: 300px;
+  height: 350px;
+}
+
+.card img{
+  max-width: 200px;
+}
+
+
+
+
+
 }

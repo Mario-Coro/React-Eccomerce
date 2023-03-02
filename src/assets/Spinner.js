@@ -3,7 +3,7 @@ import "./spinner.css";
 
 const Spinner = () => {
   return (
-    <div class="lds-dual-ring spinner">
+    <div className="lds-dual-ring spinner">
       <img
         className="spinner-img"
         src="https://cdn-icons-png.flaticon.com/512/2527/2527964.png"

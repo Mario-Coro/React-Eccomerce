@@ -15,7 +15,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div>
+        <div className="about">
           <h5 className="footer-title">About</h5>
           <p className="description">
             This is a fictional eccomerce made with React

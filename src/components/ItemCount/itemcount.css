@@ -16,6 +16,7 @@
 .number {
   padding: 5px 10px;
   font-size: 18px;
+  margin: auto 0;
 }
 
 .add {
@@ -27,4 +28,23 @@
   border: none;
   border-radius: 2px;
   font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+.counter{
+  width: 250px;
+}
+
+
+.button{
+  width: 28px;
+  height: 27px;
+  border-radius: 20px;
+}
+
+
+.add{
+  width: 150px;
+  margin-left: 20px;
+}
 }

@@ -6,6 +6,7 @@ import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CustomProvider from "./components/Context/CartContext";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
